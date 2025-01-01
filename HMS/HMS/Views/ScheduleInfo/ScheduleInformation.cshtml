@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Schedule Information";
+}
+
+<h2>Schedule Information</h2>
+
+<form>
+
+    <input type="text" class="form-control" id="txtScheduleId" style="display:none">
+    <div class="mb-3">
+        <label class="form-label">Hospital Name</label>
+        <select id="ddlHospitals">
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Patient Name</label>
+        <select id="ddlDoctors"></select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Active/Inactive</label>
+        <select name="Dept" id="ddlActiveInactive">
+            <option value="0" selected="selected">--Select One--</option>
+            <option value="1">Cancel</option>
+        </select>
+    </div>
+    <div class="mb-3" style="margin-top:10px">
+        <button type="button" class="btn btn-primary" onclick="Save()">Submit</button>
+    </div>
+
+
+    <div style="width: 500px;margin-top:10px">
+        <table id="tblInfo" class="table table-bordered table-condensed table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Hospital Name</th>
+                    <th>Patient Name</th>
+                    <th>Schedule Date</th>
+                    <th>ActiveInactive</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+</form>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/HMS/ScheduleCreate.js"></script>
+
+

@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Assistant Information";
+}
+
+<h2>Assistant Information</h2>
+
+<form>
+
+    <input type="text" class="form-control" id="txtAssistantId" style="display:none">
+    <div class="mb-3">
+        <label class="form-label">Assistant Name</label>
+        <input type="text" class="form-control" id="txtAssistantName" autofocus="true" autocomplete="off">
+    </div>
+    <div class="mb-3" style="margin-top:10px">
+        <button type="button" class="btn btn-primary" onclick="Save()">Submit</button>
+        <button type="button" id="UpdateId" class="btn btn-primary" onclick="Update()">Update</button>
+    </div>
+
+
+    <div style="width: 500px;margin-top:10px">
+        <table id="tblInfo" class="table table-bordered table-condensed table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Edit</th>
+                    @*<th>Void</th>*@
+                    <th>Id</th>
+                    <th>Patient Name</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+</form>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/HMS/AssistantInfo.js"></script>
+
+
